@@ -21,13 +21,18 @@ head(temp2)
 
 temp2$asintotal <- (temp2$asian/temp2$total)/100
 hist(temp2$asintotal)
+
 # • Q04. 아시아인구백분율전체평균을구하고, 평균을초과하면"large", 그외에는"small"을부여하는 파생변수(group)을 만들어 보세요
 
 temp2$asianAvg<- mean(temp2$asintotal)
-temp2$asianGrade <- ifelse(temp2$asianAvg )
+temp2
+temp2$group <- ifelse( temp2$asianAvg <= temp2$asintotal , "large" ,"small")
+head(temp2$group)
 # • Q05. group의 빈도수를 확인하세요.
 
 
+#table()함수는 데이터의 빈도를 보여준다.
+table(temp2$group)
 
 
 
