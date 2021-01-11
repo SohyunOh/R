@@ -117,10 +117,10 @@ dp7 <- d7 %>%
 
 dp7
 
-test７　<- ggplot(dp7) +
+ggplot(dp7) +
   geom_line( aes( x= date , y = mean_price) , color = "red") +
   geom_hline(yintercept = mean(dp7$mean_price),color = "green") +
-  labs( title = "연도별 아파트분양가 변화화동향" , x = "연도", y="평당분양가격평균")
+  labs( title = "연도별 아파트분양가 변화동향" , x = "연도", y="평당분양가격평균")
 
 
   
